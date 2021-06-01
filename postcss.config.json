@@ -1,0 +1,19 @@
+
+{
+  "plugins": [
+    "tailwindcss",
+    [
+      "postcss-preset-env",
+      {
+        "stage": 3,
+        "features": {
+          "custom-media-queries": true,
+          "custom-properties": {
+            "preserve": false
+          }
+        },
+        "importFrom": ["src/styles/vars.css"]
+      }
+    ]
+  ]
+}

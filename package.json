@@ -1,0 +1,49 @@
+{
+  "name": "repro-for-astroturf",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "next dev",
+    "export": "next build && next export",
+    "test": "run-s -l test:*",
+    "test:eslint": "eslint '{src,test}/**/*.{js,ts,tsx}'",
+    "test:prettier": "prettier '{src,test}/**/*.{css,js,ts,tsx}' -l",
+    "test:ts": "tsc --noEmit",
+    "test:stylelint": "stylelint 'src/**/*.{css,tsx}'",
+    "prettier": "prettier --write '{src,test}/**/*.{css,js,ts,tsx}'"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "@types/react": "^17.0.7",
+    "@types/react-dom": "^17.0.5",
+    "astroturf": "^1.0.0-beta.21",
+    "eslint": "^7.27.0",
+    "eslint-config-lostfictions": "^1.2.0",
+    "next": "^10.2.3",
+    "next-compose-plugins": "^2.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.3.0",
+    "tailwindcss": "^2.1.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.37.1"
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "last 2 versions",
+      "Firefox ESR",
+      "not dead",
+      "not IE 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ]
+  }
+}
